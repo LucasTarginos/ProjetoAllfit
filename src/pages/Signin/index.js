@@ -14,6 +14,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
 
 
 export default function Signin() {
@@ -87,6 +88,7 @@ export default function Signin() {
           <Text style={styles.registerText}>Não possui conta? cadastre-se  </Text>
         </TouchableOpacity>
       </View>
+      <StatusBar style="light" />
     </ScrollView>
   );
 }

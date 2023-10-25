@@ -3,6 +3,8 @@ import { useNavigation } from '@react-navigation/native';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
+
 
 export default function Dashboard() {
   const navigation = useNavigation();
@@ -62,6 +64,7 @@ export default function Dashboard() {
           </View>
         </View>
       </ScrollView>
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -137,7 +140,7 @@ const styles = StyleSheet.create({
   },
 
   dicasText: {
-    color: '#0810E',
+    color: '#000000',
     fontSize: wp('5%'),
   },
 

@@ -14,6 +14,8 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
+
 
 export default function Register() {
   const navigation = useNavigation();
@@ -74,6 +76,7 @@ export default function Register() {
       <TouchableOpacity style={styles.buttonLogin} onPress={() => navigation.navigate('Signin')}>
         <Text style={styles.login}>Já possui conta? login</Text>
       </TouchableOpacity>
+      <StatusBar style="light" />
     </ScrollView>
   );
 }

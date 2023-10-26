@@ -4,6 +4,7 @@ import Welcome from '../pages/Welcome'
 import Register from '../pages/Register'
 import Signin from '../pages/Signin'
 import Dashboard from '../pages/Dashboard'
+import Menu from '../pages/Menu'
 import Perfil from '../pages/Perfil'
 import Matricula from '../pages/Matricula'
 
@@ -36,6 +37,12 @@ export default function Routes(){
                 > 
             </Stack.Screen>
 
+            <Stack.Screen name="Menu"
+                component={Menu}
+                options={{headerShown:false}} 
+                > 
+            </Stack.Screen>
+
             <Stack.Screen name="Perfil"
                 component={Perfil}
                 options={{headerShown:false}} 
@@ -47,6 +54,7 @@ export default function Routes(){
                 options={{headerShown:false}} 
                 > 
             </Stack.Screen>
+
 
         </Stack.Navigator>
     )

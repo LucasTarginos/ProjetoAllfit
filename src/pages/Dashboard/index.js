@@ -22,7 +22,7 @@ export default function Dashboard() {
           <MaterialCommunityIcons name="account-circle" size={wp('15%')} color="#000" />
         </TouchableOpacity>
         <Text style={styles.user}>Nome do usuário</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
           <MaterialCommunityIcons name="menu" size={wp('8%')} color="#000" />
         </TouchableOpacity>
       </View>

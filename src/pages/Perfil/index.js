@@ -25,7 +25,7 @@ export default function Perfil() {
         <Text style={styles.formText}>Seu plano:                Anual Premium</Text>
      </View>
 
-     <TouchableOpacity style={styles.menuItem}>
+     <TouchableOpacity style={styles.menuItem} > 
         <MaterialCommunityIcons name="arrow-top-right" size={wp('10%')} color="#000" />
         <Text style={styles.menuItemText}>Meu Progresso</Text>
       </TouchableOpacity>

@@ -18,7 +18,7 @@ export default function Dashboard() {
     <View style={styles.container}>
       {/* Cabeçalho Fixado no Topo */}
       <View style={styles.headerContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
           <MaterialCommunityIcons name="account-circle" size={wp('15%')} color="#000" />
         </TouchableOpacity>
         <Text style={styles.user}>Nome do usuário</Text>

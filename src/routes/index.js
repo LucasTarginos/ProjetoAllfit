@@ -7,6 +7,7 @@ import Dashboard from '../pages/Dashboard'
 import Menu from '../pages/Menu'
 import Perfil from '../pages/Perfil'
 import Matricula from '../pages/Matricula'
+import Calculadoras from '../pages/Calculadoras'
 
 const Stack = createNativeStackNavigator(); 
 
@@ -36,6 +37,15 @@ export default function Routes(){
                 options={{headerShown:false}} 
                 > 
             </Stack.Screen>
+
+            <Stack.Screen name="Calculadoras"
+                component={Calculadoras}
+                options={{headerShown:false}}
+            > 
+            </Stack.Screen>
+
+        
+
 
             <Stack.Screen name="Menu"
                 component={Menu}

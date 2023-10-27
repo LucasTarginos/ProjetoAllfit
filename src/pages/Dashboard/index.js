@@ -30,7 +30,9 @@ export default function Dashboard() {
       {/* Conteúdo Rolável */}
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.cards}>
-          <TouchableOpacity style={styles.card} >
+          <TouchableOpacity style={styles.card}
+            onPress={() => navigation.navigate('Calculadoras')}
+          >
             <Image source={require('../../assets/calculadora.png')} style={styles.cardIcon} />
             <Text style={styles.textCard}>Calculadoras</Text>
           </TouchableOpacity>

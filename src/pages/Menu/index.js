@@ -93,13 +93,15 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   help:{
-    backgroundColor: '#D9D9D9',
+    backgroundColor: '#909090',
+    width: wp('80%'),
     borderRadius: 10,
     padding: wp('1%'), 
     marginVertical: hp('1%'),
+    marginHorizontal: wp('10%'),
     color: '#7D7D7D',
     fontSize: wp('1.5%'), 
-    paddingHorizontal: wp('5%')
+    paddingHorizontal: wp('1%'),
   },
 
   text:{
@@ -124,7 +126,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp('5%'),
 },
 bhelp: {
-    backgroundColor: '#909090',
+    backgroundColor: '#B3B3B3',
     width: wp('38%'), // Ajuste conforme necessário
     borderRadius: 4,
     paddingVertical: hp('2%'), // 2% da altura da tela para o padding vertical

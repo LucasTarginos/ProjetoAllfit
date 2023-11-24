@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Switch, TouchableOpacity, Alert } from 'react-native';
 import { useState } from 'react';
 
+
 export default function Imc() {
   const [altura, setAltura] = useState("");
   const [peso, setPeso] = useState("");
@@ -64,10 +65,7 @@ export default function Imc() {
         onChangeText={(text) => setIdade(text)}
       />
 
-      <TouchableOpacity onPress={handleCalculator} style={styles.button}>
-        <Text style={styles.buttonText}>Calculadora</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
+     
     </View>
   );
 }

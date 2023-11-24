@@ -1,6 +1,10 @@
 import React from "react";
+<<<<<<< HEAD
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { StyleSheet } from "react-native";
+=======
+import { createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
+>>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
 
 import Bf from './Bf'
 import Imc from './Imc';
@@ -9,6 +13,7 @@ import Tbm from './Tbm';
 
 const Tab = createMaterialTopTabNavigator();
 
+<<<<<<< HEAD
 export default function RoutesCalculator() {
   return (
     <Tab.Navigator
@@ -42,3 +47,22 @@ export default function RoutesCalculator() {
 const styles = StyleSheet.create({
   // Pode adicionar estilos adicionais se necessário
 });
+=======
+const tabBarOptions = {
+
+
+}
+export default function RoutesCalculator(){
+    return(
+        <Tab.Navigator  options={{headerShown:false}}>
+            <Tab.Screen name="Bf" component={Bf}/>
+
+            <Tab.Screen name="Imc" component={Imc}/>
+
+            <Tab.Screen name="Agua" component={Agua}/>
+
+            <Tab.Screen name="Tbm" component={Tbm}/>
+        </Tab.Navigator>
+    )
+}
+>>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f

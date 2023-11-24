@@ -39,16 +39,15 @@ export default function MenuAmigos() {
         <Text style={styles.userName}>Nome do usuário</Text>
       </View>
 
+  
+
       <TouchableOpacity style={styles.menuItem}>
-        <Text style={styles.ItemText}>Perfil</Text>
-        <Text style={styles.menuItemText}>acesse seu perfil</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.menuItem}>
-        <Text style={styles.ItemText}>Ajuda</Text>
+        <Text style={styles.itemText}>Ajuda</Text>
         <Text style={styles.menuItemText}>Ajuda e Suporte</Text>
       </TouchableOpacity>
+
       <TouchableOpacity style={styles.menuItem} onPress={() => setAlertVisible(true)}>
-        <Text style={styles.ItemText}>Sair</Text>
+        <Text style={styles.itemText}>Sair</Text>
         <Text style={styles.menuItemText}>Sair da aplicação</Text>
       </TouchableOpacity>
 
@@ -56,20 +55,23 @@ export default function MenuAmigos() {
         <View style={styles.help}>
           <Text style={styles.text}>Deseja sair da aplicação?</Text>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.bhelp} onPress={showAlert}>
-              <Text style={styles.buttonTexthelp}>Sim</Text>
+            <TouchableOpacity style={styles.buttonHelp} onPress={showAlert}>
+              <Text style={styles.buttonTextHelp}>Sim</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.bhelp} onPress={() => setAlertVisible(false)}>
-              <Text style={styles.buttonTexthelp}>Não</Text>
+
+            <TouchableOpacity style={styles.buttonHelp} onPress={() => setAlertVisible(false)}>
+              <Text style={styles.buttonTextHelp}>Não</Text>
             </TouchableOpacity>
           </View>
         </View>
       )}
 
-      <TouchableOpacity style={styles.menuItem} onPress={() => navigation.goBack()}>
-        <MaterialCommunityIcons name="arrow-left" size={wp('10%')} color="#000" />
-        <Text style={styles.ItemText}>Voltar</Text>
-      </TouchableOpacity>
+<TouchableOpacity style={styles.menuItem} onPress={() => navigation.goBack()}>
+  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+    <MaterialCommunityIcons name="arrow-left" size={wp('10%')} color="#000" />
+    <Text style={styles.itemText}>Voltar</Text>
+  </View>
+</TouchableOpacity>
       <StatusBar style="light" />
     </ScrollView>
   );
@@ -94,8 +96,9 @@ const styles = StyleSheet.create({
   menuItem: {
     alignItems: 'left',
     padding: wp('6%'),
+    borderBottomWidth: 0.5,
   },
-  ItemText: {
+  itemText: {
     marginLeft: wp('4%'),
     fontSize: wp('4.5%'),
     color: '#000',
@@ -129,7 +132,7 @@ const styles = StyleSheet.create({
     width: wp('80%'),
     paddingHorizontal: wp('5%'),
   },
-  bhelp: {
+  buttonHelp: {
     backgroundColor: '#B3B3B3',
     width: wp('38%'),
     borderRadius: 4,
@@ -138,7 +141,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
   },
-  buttonTexthelp: {
+  buttonTextHelp: {
     color: '#000',
     fontSize: wp('3%'),
     fontWeight: 'bold',

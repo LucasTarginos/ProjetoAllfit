@@ -16,7 +16,6 @@ export default function Dashboard() {
 
   return (
     <View style={styles.container}>
-      {/* Cabeçalho Fixado no Topo */}
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
           <MaterialCommunityIcons name="account-circle" size={wp('15%')} color="#000" />
@@ -48,10 +47,11 @@ export default function Dashboard() {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Progresso')}>
-            <Image source={require('../../assets/progresso_icon.png')} style={styles.cardIcon} />
-            <Text style={styles.textCard}>Progresso</Text>
-          </TouchableOpacity>
-
+              <Image source={require('../../assets/progresso_icon.png')} style={styles.cardIcon} />
+              <Text style={styles.textCard}>Progresso</Text>
+            </TouchableOpacity>
+          <View style={styles.separator} />
+          
           <View style={styles.Help}>
             <TouchableOpacity style={styles.ButtonDicas} onPress={toggleTextVisibility}>
               <Text style={styles.dicasText}>Dicas</Text>
@@ -76,7 +76,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  
+  separator: {
+    height: 1,
+    backgroundColor: '#ccc', // Cor da linha
+    marginVertical: hp('2%'), // Espaçamento vertical
+    width: '90%', // Largura da linha
+    alignSelf: 'center', // Centraliza a linha
+  },
   headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -95,15 +101,16 @@ const styles = StyleSheet.create({
   },
 
   scrollContent: {
-    paddingTop: hp('18%'), // Garante espaço para o cabeçalho fixo no topo
+    paddingTop: hp('16%'), // Garante espaço para o cabeçalho fixo no topo
+    alignItems: "center"
   },
 
   cards: {
     marginTop: hp('1%'),
     paddingHorizontal: wp('2%'),
     width: wp('95%'),
-  },
-
+    alignItems: "center",
+    },
   card: {
     backgroundColor: '#D9D9D9',
     width: wp('90%'),
@@ -137,8 +144,9 @@ const styles = StyleSheet.create({
   },
 
   ButtonDicas: {
-    marginTop: hp('5%'), // 5% da altura da tela para espaçamento
+    marginTop: hp('5%'),
     alignSelf: 'center',
+    // Adicionado alinhamento horizontal centralizado
   },
 
   dicasText: {
@@ -147,16 +155,16 @@ const styles = StyleSheet.create({
   },
 
   Dicas: {
-    backgroundColor: '#D9D9D9',
-    borderRadius: wp('4%'), // Bordas proporcionais ao width
-    padding: wp('10%'), // 2% da largura da tela para padding
+    backgroundColor: '#F2F2F2', // Ajustado para uma cor mais clara para melhor legibilidade do texto
+    borderRadius: wp('4%'),
+    padding: wp('10%'),
     marginVertical: hp('2%'),
     color: '#7D7D7D',
-    fontSize: wp('4%'), // 4% da largura da tela para o tamanho da fonte
+    fontSize: wp('4%'),
     textAlign: 'center',
   },
   text: {
-    fontSize: wp('4%'), // 4% da largura da tela para o tamanho da fonte
+    fontSize: wp('4%'),
     textAlign: 'center',
   },
 });

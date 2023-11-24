@@ -30,22 +30,24 @@ export default function Dashboard() {
       {/* Conteúdo Rolável */}
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.cards}>
-          <TouchableOpacity style={styles.card} >
+          <TouchableOpacity style={styles.card}
+            onPress={() => navigation.navigate('Calculadoras')}
+          >
             <Image source={require('../../assets/calculadora.png')} style={styles.cardIcon} />
             <Text style={styles.textCard}>Calculadoras</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.card} >
+          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Medicao')}>
             <Image source={require('../../assets/macros_icon.png')} style={styles.cardIcon} />
             <Text style={styles.textCard}>Macros</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('Treino')}>
             <Image source={require('../../assets/arm-muscle.png')} style={styles.cardIcon} />
             <Text style={styles.textCard}>Treino</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Progresso')}>
             <Image source={require('../../assets/progresso_icon.png')} style={styles.cardIcon} />
             <Text style={styles.textCard}>Progresso</Text>
           </TouchableOpacity>

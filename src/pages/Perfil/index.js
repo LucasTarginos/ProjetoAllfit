@@ -45,7 +45,7 @@ export default function Perfil() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#B3B3B3',
+    backgroundColor: '#FFFF',
   },
   voltar:{
     paddingStart: wp('2%'),

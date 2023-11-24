@@ -37,7 +37,7 @@ export default function Dashboard() {
             <Text style={styles.textCard}>Calculadoras</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Medicao')}>
+          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Macros')}>
             <Image source={require('../../assets/macros_icon.png')} style={styles.cardIcon} />
             <Text style={styles.textCard}>Macros</Text>
           </TouchableOpacity>

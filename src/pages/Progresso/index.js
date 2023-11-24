@@ -41,12 +41,12 @@ export default function Medicao() {
       <Text style={styles.title}>Painel</Text>
 
       <View style={styles.buttons}>
-        <TouchableOpacity style={styles.treinoButton} >
+        <TouchableOpacity style={styles.treinoButton} onPress={() => navigation.navigate('Treino')}>
           <Image source={require('../../assets/arm-muscle.png')} style={styles.cardIconLarge} />          
           <Text style={styles.ButtonText}>Treino</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.medicoesButton} >
+        <TouchableOpacity style={styles.medicoesButton}  onPress={() => navigation.navigate('Medicao')}>
           <Image source={require('../../assets/medicao.png')} style={styles.cardIconLarge} />   
           <Text style={styles.ButtonText}>Medições</Text>     
         </TouchableOpacity>

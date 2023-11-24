@@ -9,6 +9,7 @@ import Perfil from '../pages/Perfil'
 import Matricula from '../pages/Matricula'
 import Calculadoras from '../pages/Calculadoras'
 import Treino from '../pages/Treino'
+import Macros from '../pages/Macros'
 import Progresso from '../pages/Progresso'
 import Medicao from '../pages/Medicao'
 import MedicaoEdit from '../pages/MedicaoEdit'
@@ -87,6 +88,12 @@ export default function Routes(){
 
             <Stack.Screen name="MedicaoEdit"
                 component={MedicaoEdit}
+                options={{headerShown:false}} 
+                > 
+            </Stack.Screen>
+
+            <Stack.Screen name="Macros"
+                component={Macros}
                 options={{headerShown:false}} 
                 > 
             </Stack.Screen>

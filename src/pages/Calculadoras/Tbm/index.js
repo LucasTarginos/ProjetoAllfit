@@ -1,23 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Switch, TouchableOpacity, Alert } from 'react-native';
 
 export default function TmbCalculator() {
-=======
-import { StyleSheet, Text, View, TextInput, Switch, TouchableOpacity, Alert } from 'react-native';
-import { useState } from 'react';
-
-export default function Imc() {
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
   const [altura, setAltura] = useState("");
   const [peso, setPeso] = useState("");
   const [idade, setIdade] = useState("");
   const [genero, setGenero] = useState(false);
-<<<<<<< HEAD
 
-=======
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
   const toggleSwitch = () => setGenero((previousState) => !previousState);
 
   const handleCalculator = () => {
@@ -34,20 +24,13 @@ export default function Imc() {
       ? 10 * weight + 6.25 * height - 5 * age + 5
       : 10 * weight + 6.25 * height - 5 * age - 161;
 
-<<<<<<< HEAD
     Alert.alert("Sua TMB", `Sua taxa metabólica basal é de ${tmb.toFixed(2)} calorias por dia.`);
-=======
-    Alert.alert("Sua TMB", `Sua taxa metabólica basal é de ${tmb}`);
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
   };
 
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
       <Text style={styles.titulo}>Taxa Metabólica Basal</Text>
       <Text style={styles.desc}>É o total de calorias gastas para manter as funções vitais, como os batimentos cardíacos, a pressão arterial e a temperatura corporal.</Text>
-=======
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
       <View style={styles.inputGroupRow}>
         <Text>Feminino</Text>
         <Switch
@@ -57,10 +40,6 @@ export default function Imc() {
           onValueChange={toggleSwitch}
           value={genero}
         />
-<<<<<<< HEAD
-=======
-
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
         <Text>Masculino</Text>
       </View>
       <Text>Altura (cm)</Text>
@@ -70,10 +49,6 @@ export default function Imc() {
         value={altura}
         onChangeText={(text) => setAltura(text)}
       />
-<<<<<<< HEAD
-=======
-
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
       <Text>Peso (kg)</Text>
       <TextInput
         style={styles.input}
@@ -81,10 +56,6 @@ export default function Imc() {
         keyboardType="number-pad"
         onChangeText={(text) => setPeso(text)}
       />
-<<<<<<< HEAD
-=======
-
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
       <Text>Idade</Text>
       <TextInput
         keyboardType="number-pad"
@@ -92,14 +63,8 @@ export default function Imc() {
         value={idade}
         onChangeText={(text) => setIdade(text)}
       />
-<<<<<<< HEAD
       <TouchableOpacity onPress={handleCalculator} style={styles.button}>
         <Text style={styles.buttonText}>Calcular TMB</Text>
-=======
-
-      <TouchableOpacity onPress={handleCalculator} style={styles.button}>
-        <Text style={styles.buttonText}>Calculadora</Text>
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
@@ -111,17 +76,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-<<<<<<< HEAD
     paddingTop: 20,
-=======
-    justifyContent: 'center',
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
   },
   inputGroupRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-<<<<<<< HEAD
     marginBottom: 20,
   },
   titulo: {
@@ -134,8 +94,6 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
     marginHorizontal: 20,
     marginBottom: 20,
-=======
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
   },
   input: {
     height: 54,
@@ -145,12 +103,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 16,
     marginTop: 4,
-<<<<<<< HEAD
     borderWidth: 0,
     borderBottomWidth: 1,
-=======
-    borderWidth: 1,
->>>>>>> 0cd8400e992cf85bfff3f3074fae6a3b7ff2304f
     borderColor: '#000',
   },
   button: {
